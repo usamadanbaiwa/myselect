@@ -4,35 +4,43 @@ Welcome to my personal custom select library! This JavaScript library is designe
 
 
 
-#Custom Select JS Library
+# Custom Select JS Library
 
-#Overview
-This JavaScript library provides a customizable solution for enhancing HTML <select> elements. It allows you to create stylish, functional, and interactive custom select dropdowns with extensive styling options.
+# Overview
 
-#Features:
-
-  Customizable Styles: Style the placeholder, arrow, dropdown items, and more using a configuration object.
-  Dynamic Updates: Easily update the select options with new data.
-  Event Handling: Supports interactions such as showing/hiding dropdowns and selecting items.
-
-#Getting Started:
-
-**Include the Library**
-
-> Ensure that your custom select JS library is included in your project:
-
+This JavaScript library provides a customizable solution for enhancing HTML elements.
+```html
+<select>
 ```
+It allows you to create stylish, functional, and interactive custom select dropdowns with extensive styling options.
+
+
+### Features
+**Customizable Styles:** Style the placeholder, arrow, dropdown items, and more using a configuration object.
+
+**Dynamic Updates:** Easily update the select options with new data.
+
+### Event Handling
+Supports interactions such as showing/hiding dropdowns and selecting items.
+
+# Getting Started:
+
+## Include the Library
+
+Ensure that your custom select JS library is included in your project:
+
+```javascript
 <script src="https://cdn.jsdelivr.net/gh/usamadanbaiwa/myselect@main/code/myselect.min.js"></script>
 
 ```
 
-**1.** Create the HTML structure
+## Create the HTML structure
 
-> You need to create a div element with the class c-select, which acts as a container for the custom select box. Inside this container, add a standard HTML select tag with option tags to define your choices.
+You need to create a div element with the class c-select, which acts as a container for the custom select box. Inside this container, add a standard HTML select tag with option tags to define your choices.
 
-Here’s an example:
+**Here’s an example:**
 
-```
+```html
 <div class="c-select" placeholder="Select an option">
     <select>
         <option value="Option 1">Option 1</option>
@@ -40,15 +48,15 @@ Here’s an example:
         <option value="Option 3">Option 3</option>
     </select>
 </div>
-
 ```
 
-**2.*** Initialize the custom select
-> After creating the HTML structure, call the mySelect object and initialize it with your custom styles. The initialize method accepts a single object parameter, which allows you to customize the appearance and behavior of the custom select.
+**Initialize the custom select** 
+
+After creating the HTML structure, call the mySelect object and initialize it with your custom styles. The initialize method accepts a single object parameter, which allows you to customize the appearance and behavior of the custom select.
 
 Here’s an example of how to initialize the custom select with style options:
 
-```
+```javascript
 document.addEventListener('DOMContentLoaded', () => {
     let myCustomSelect = new mySelect();
     
@@ -74,28 +82,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ```
 
-**3.*** Customize the placeholder and styles
+### Customize the placeholder and styles
  You can customize the placeholder, select, and arrow styles by modifying the styleOptions object passed to the initialize method.
 
-placeholder: You can define the appearance of the placeholder using the placeholder object.
+**placeholder:** You can define the appearance of the placeholder using the placeholder object.
 arrow: Customize the size, color, and appearance of the dropdown arrow using the arrow object.
 onSelect: Use the onselect object to define styles for when a user selects an item from the list.
 
 
-**4.** Adding or updating the options dynamically
+### Adding or updating the options dynamically
 To update the select options dynamically, use the updateSelect method, which takes the id of the container and an array of new data:
 
-```
+```javascript
 myCustomSelect.updateSelect('your-container-id', ['New Option 1', 'New Option 2', 'New Option 3']);
 
 ```
 
 In this example, replace 'your-container-id' with the actual ID of the div.c-select element.
 
-**5.** Example in action
+# Example in action
 Here’s a full working example:
 
-```
+```html
 <div id="select-container" class="c-select" placeholder="Choose a fruit">
     <select>
         <option value="Apple">Apple</option>
